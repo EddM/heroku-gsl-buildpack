@@ -23,7 +23,7 @@ function set-default-env (){
 
 echo "-----> Fetching and vendoring gsl"
 curl "http://ftp.heanet.ie/mirrors/gnu/gsl/gsl-2.4.tar.gz" -s -o - | tar xzf - -C "$VENDOR_DIR"
-mv "$VENDOR_DIR/gsl-2-4" "$VENDOR_DIR/gsl"
+mv "$VENDOR_DIR/gsl-2.4" "$VENDOR_DIR/gsl"
 # FYI we do this and set the export path explicitly because we cannot assume all buildpacks copy this dir over
 # We need to also leave the vendor dir repo in place, as the current app vendor gets blown away and replaced with
 # what is in the build dir
